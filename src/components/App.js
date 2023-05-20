@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <div id="main">// Do not alter the main div</div>
-      {{ para } ? (
+      {para ? (
         ""
       ) : (
         <p id="para">
