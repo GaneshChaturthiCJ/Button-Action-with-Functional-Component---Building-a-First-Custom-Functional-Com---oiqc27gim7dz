@@ -2,19 +2,27 @@ import React, {Component, useState} from "react";
 import "./../styles/App.css";
 
 function App() {
-  const [para, setPara] = useState("");
+
+  const [para, setPara] = useState(true);
 
   const renderP = () => {
-    setPara(
-      "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"
-    );
+    setPara(false);
   };
 
   return (
     <>
       <div id="main">// Do not alter the main div</div>
-      <p id="para">{para}</p>
-      <button id="click" onClick={renderP}></button>
+      {{ para } ? (
+        ""
+      ) : (
+        <p id="para">
+          Hello, I've learnt to use the full-stack evaluation tool. This makes
+          me so happy
+        </p>
+      )}
+      <button id="click" onClick={renderP}>
+        Click me
+      </button>
     </>
   );
 }
